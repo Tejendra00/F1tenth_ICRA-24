@@ -1,0 +1,11 @@
+# The following params are for maps
+map_name: 'final2024'
+map_img_ext: '.pgm'
+
+# The following params are for opponent predictor
+track_file: "track"
+inner_bound: "inner_bound"
+outer_bound: "outer_bound"
+
+# The following params are for dummy opponent car (simulation only)
+dummy_car_file: "curve1"

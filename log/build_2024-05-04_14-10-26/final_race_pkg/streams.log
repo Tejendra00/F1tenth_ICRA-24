@@ -1,0 +1,24 @@
+[0.738s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg': PYTHONPATH=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/prefix_override:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/final_race_pkg build --build-base /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/build install --record /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log --install-scripts $base/lib/final_race_pkg --single-version-externally-managed
+[0.951s] running egg_info
+[0.951s] writing ../../build/final_race_pkg/final_race_pkg.egg-info/PKG-INFO
+[0.951s] writing dependency_links to ../../build/final_race_pkg/final_race_pkg.egg-info/dependency_links.txt
+[0.951s] writing entry points to ../../build/final_race_pkg/final_race_pkg.egg-info/entry_points.txt
+[0.951s] writing requirements to ../../build/final_race_pkg/final_race_pkg.egg-info/requires.txt
+[0.951s] writing top-level names to ../../build/final_race_pkg/final_race_pkg.egg-info/top_level.txt
+[0.987s] reading manifest file '../../build/final_race_pkg/final_race_pkg.egg-info/SOURCES.txt'
+[0.995s] writing manifest file '../../build/final_race_pkg/final_race_pkg.egg-info/SOURCES.txt'
+[0.996s] running build
+[0.996s] running build_py
+[0.996s] running install
+[0.996s] running install_lib
+[0.999s] running install_data
+[0.999s] running install_egg_info
+[0.999s] removing '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages/final_race_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.999s] Copying ../../build/final_race_pkg/final_race_pkg.egg-info to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages/final_race_pkg-0.0.0-py3.8.egg-info
+[0.999s] running install_scripts
+[1.015s] Installing main_agent script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg
+[1.016s] Installing opp_agent script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg
+[1.016s] Installing pure_pursuit_node script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg
+[1.016s] Installing traj_killer script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg
+[1.017s] writing list of installed files to '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log'
+[1.104s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg' returned '0': PYTHONPATH=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/prefix_override:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/final_race_pkg build --build-base /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/build install --record /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log --install-scripts $base/lib/final_race_pkg --single-version-externally-managed

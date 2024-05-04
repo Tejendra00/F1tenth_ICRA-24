@@ -1,0 +1,81 @@
+[0.127s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/dummy_car -DCMAKE_INSTALL_PREFIX=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car
+[0.266s] -- The C compiler identification is GNU 9.4.0
+[0.350s] -- The CXX compiler identification is GNU 9.4.0
+[0.356s] -- Check for working C compiler: /usr/bin/cc
+[0.400s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.401s] -- Detecting C compiler ABI info
+[0.448s] -- Detecting C compiler ABI info - done
+[0.453s] -- Detecting C compile features
+[0.454s] -- Detecting C compile features - done
+[0.456s] -- Check for working CXX compiler: /usr/bin/c++
+[0.501s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.502s] -- Detecting CXX compiler ABI info
+[0.555s] -- Detecting CXX compiler ABI info - done
+[0.562s] -- Detecting CXX compile features
+[0.562s] -- Detecting CXX compile features - done
+[0.565s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.594s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.594s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.701s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.748s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.754s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.827s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.850s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.915s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.960s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.962s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.964s] -- Looking for pthread.h
+[1.023s] -- Looking for pthread.h - found
+[1.023s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.074s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.074s] -- Looking for pthread_create in pthreads
+[1.111s] -- Looking for pthread_create in pthreads - not found
+[1.115s] -- Looking for pthread_create in pthread
+[1.167s] -- Looking for pthread_create in pthread - found
+[1.167s] -- Found Threads: TRUE  
+[1.285s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[1.286s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.314s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.373s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[1.399s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.454s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.510s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[1.802s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.848s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.852s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.853s] -- Added test 'lint_cmake' to check CMake code style
+[1.853s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.855s] -- Added test 'xmllint' to check XML markup files
+[1.857s] -- Configuring done
+[1.859s] -- Generating done
+[1.860s] -- Build files have been written to: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car
+[1.866s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/dummy_car -DCMAKE_INSTALL_PREFIX=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car
+[1.866s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car -- -j2 -l2
+[1.897s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car -- -j2 -l2
+[1.914s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car
+[1.924s] -- Install configuration: ""
+[1.924s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/pythonpath.sh
+[1.924s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/pythonpath.dsv
+[1.924s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car
+[1.924s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car/__init__.py
+[1.938s] Listing '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car'...
+[1.938s] Compiling '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car/__init__.py'...
+[1.941s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/dummy_car/dummy_car_node.py
+[1.941s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/launch
+[1.941s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/launch/dummy_car_launch.py
+[1.942s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/ament_index/resource_index/package_run_dependencies/dummy_car
+[1.942s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/ament_index/resource_index/parent_prefix_path/dummy_car
+[1.942s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/ament_prefix_path.sh
+[1.942s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/ament_prefix_path.dsv
+[1.942s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/path.sh
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/path.dsv
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.bash
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.sh
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.zsh
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.dsv
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.dsv
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/ament_index/resource_index/packages/dummy_car
+[1.943s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/cmake/dummy_carConfig.cmake
+[1.944s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/cmake/dummy_carConfig-version.cmake
+[1.944s] -- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.xml
+[1.947s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car
