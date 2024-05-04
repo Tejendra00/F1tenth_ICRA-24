@@ -42,7 +42,7 @@ def generate_launch_description():
             map_cfg_dict,
 
             # RVIZ Params
-            {"debug_img": True},
+            {"debug_img": False},
             {"visualize": True},
             {"visualize_grid": True},
             {"visualize_obstacle": True},

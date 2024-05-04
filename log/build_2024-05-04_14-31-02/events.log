@@ -1,0 +1,258 @@
+[0.000000] (-) TimerEvent: {}
+[0.000115] (dummy_car) JobQueued: {'identifier': 'dummy_car', 'dependencies': OrderedDict()}
+[0.000138] (final_race_pkg) JobQueued: {'identifier': 'final_race_pkg', 'dependencies': OrderedDict()}
+[0.000149] (opponent_predictor) JobQueued: {'identifier': 'opponent_predictor', 'dependencies': OrderedDict()}
+[0.000158] (dummy_car) JobStarted: {'identifier': 'dummy_car'}
+[0.094552] (-) TimerEvent: {}
+[0.139873] (final_race_pkg) JobStarted: {'identifier': 'final_race_pkg'}
+[0.194642] (-) TimerEvent: {}
+[0.295047] (-) TimerEvent: {}
+[0.337242] (dummy_car) JobProgress: {'identifier': 'dummy_car', 'progress': 'cmake'}
+[0.340982] (dummy_car) JobProgress: {'identifier': 'dummy_car', 'progress': 'build'}
+[0.341032] (dummy_car) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car', '--', '-j2', '-l2'], 'cwd': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros2'), ('SSH_AGENT_PID', '2082'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1410'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:39131'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2:@/tmp/.ICE-unix/2125,unix/ros2:/tmp/.ICE-unix/2125'), ('INVOCATION_ID', '7dbe9aa4a5c644ccaa41b270f0026117'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5b22d27a_8560_4a19_90c0_c8fa015e604f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.72'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.395185] (-) TimerEvent: {}
+[0.495790] (-) TimerEvent: {}
+[0.597221] (-) TimerEvent: {}
+[0.698675] (-) TimerEvent: {}
+[0.742640] (dummy_car) CommandEnded: {'returncode': 0}
+[0.798876] (-) TimerEvent: {}
+[0.812617] (dummy_car) JobProgress: {'identifier': 'dummy_car', 'progress': 'install'}
+[0.822329] (dummy_car) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car'], 'cwd': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros2'), ('SSH_AGENT_PID', '2082'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1410'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:39131'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2:@/tmp/.ICE-unix/2125,unix/ros2:/tmp/.ICE-unix/2125'), ('INVOCATION_ID', '7dbe9aa4a5c644ccaa41b270f0026117'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5b22d27a_8560_4a19_90c0_c8fa015e604f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.72'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.832385] (dummy_car) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.832617] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/pythonpath.sh\n'}
+[0.832719] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/pythonpath.dsv\n'}
+[0.832818] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car\n'}
+[0.832919] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car/__init__.py\n'}
+[0.865025] (dummy_car) StdoutLine: {'line': b"Listing '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages/dummy_car'...\n"}
+[0.877461] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/dummy_car/dummy_car_node.py\n'}
+[0.877562] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/launch\n'}
+[0.877598] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/launch/dummy_car_launch.py\n'}
+[0.877634] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/ament_index/resource_index/package_run_dependencies/dummy_car\n'}
+[0.877665] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/ament_index/resource_index/parent_prefix_path/dummy_car\n'}
+[0.877693] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/ament_prefix_path.sh\n'}
+[0.877720] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/ament_prefix_path.dsv\n'}
+[0.877747] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/path.sh\n'}
+[0.877774] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/environment/path.dsv\n'}
+[0.877800] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.bash\n'}
+[0.877827] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.sh\n'}
+[0.877854] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.zsh\n'}
+[0.877881] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/local_setup.dsv\n'}
+[0.877907] (dummy_car) StdoutLine: {'line': b'-- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.dsv\n'}
+[0.881918] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/ament_index/resource_index/packages/dummy_car\n'}
+[0.881982] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/cmake/dummy_carConfig.cmake\n'}
+[0.882013] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/cmake/dummy_carConfig-version.cmake\n'}
+[0.882041] (dummy_car) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.xml\n'}
+[0.882069] (dummy_car) CommandEnded: {'returncode': 0}
+[0.904134] (-) TimerEvent: {}
+[1.005590] (-) TimerEvent: {}
+[1.105788] (-) TimerEvent: {}
+[1.205979] (-) TimerEvent: {}
+[1.306352] (-) TimerEvent: {}
+[1.407587] (-) TimerEvent: {}
+[1.472569] (dummy_car) JobEnded: {'identifier': 'dummy_car', 'rc': 0}
+[1.474547] (opponent_predictor) JobStarted: {'identifier': 'opponent_predictor'}
+[1.507717] (-) TimerEvent: {}
+[1.609988] (-) TimerEvent: {}
+[1.695282] (final_race_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/final_race_pkg', 'build', '--build-base', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/build', 'install', '--record', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log', '--install-scripts', '$base/lib/final_race_pkg', '--single-version-externally-managed'], 'cwd': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ros2', 'SSH_AGENT_PID': '2082', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/ros2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1410', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ros2', 'JOURNAL_STREAM': '9:39131', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ros2', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/ros2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ros2:@/tmp/.ICE-unix/2125,unix/ros2:/tmp/.ICE-unix/2125', 'INVOCATION_ID': '7dbe9aa4a5c644ccaa41b270f0026117', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5b22d27a_8560_4a19_90c0_c8fa015e604f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.72', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '6', 'AMENT_PREFIX_PATH': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/prefix_override:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car'}, 'shell': False}
+[1.709034] (opponent_predictor) JobProgress: {'identifier': 'opponent_predictor', 'progress': 'cmake'}
+[1.709988] (opponent_predictor) JobProgress: {'identifier': 'opponent_predictor', 'progress': 'build'}
+[1.710011] (-) TimerEvent: {}
+[1.714362] (opponent_predictor) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor', '--', '-j2', '-l2'], 'cwd': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros2'), ('SSH_AGENT_PID', '2082'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1410'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:39131'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2:@/tmp/.ICE-unix/2125,unix/ros2:/tmp/.ICE-unix/2125'), ('INVOCATION_ID', '7dbe9aa4a5c644ccaa41b270f0026117'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5b22d27a_8560_4a19_90c0_c8fa015e604f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.72'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy')]), 'shell': False}
+[1.810110] (-) TimerEvent: {}
+[1.874671] (opponent_predictor) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target opponent_predictor_node\x1b[0m\n'}
+[1.910191] (-) TimerEvent: {}
+[1.925035] (final_race_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[1.925622] (final_race_pkg) StdoutLine: {'line': b'writing ../../build/final_race_pkg/final_race_pkg.egg-info/PKG-INFO\n'}
+[1.925893] (final_race_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/final_race_pkg/final_race_pkg.egg-info/dependency_links.txt\n'}
+[1.926181] (final_race_pkg) StdoutLine: {'line': b'writing entry points to ../../build/final_race_pkg/final_race_pkg.egg-info/entry_points.txt\n'}
+[1.926322] (final_race_pkg) StdoutLine: {'line': b'writing requirements to ../../build/final_race_pkg/final_race_pkg.egg-info/requires.txt\n'}
+[1.926458] (final_race_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/final_race_pkg/final_race_pkg.egg-info/top_level.txt\n'}
+[1.974060] (opponent_predictor) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/opponent_predictor_node.dir/src/opponent_predictor.cpp.o\x1b[0m\n'}
+[1.987882] (final_race_pkg) StdoutLine: {'line': b"reading manifest file '../../build/final_race_pkg/final_race_pkg.egg-info/SOURCES.txt'\n"}
+[1.989700] (final_race_pkg) StdoutLine: {'line': b"writing manifest file '../../build/final_race_pkg/final_race_pkg.egg-info/SOURCES.txt'\n"}
+[1.989882] (final_race_pkg) StdoutLine: {'line': b'running build\n'}
+[1.990221] (final_race_pkg) StdoutLine: {'line': b'running build_py\n'}
+[1.991911] (final_race_pkg) StdoutLine: {'line': b'running install\n'}
+[1.992487] (final_race_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[1.995522] (final_race_pkg) StdoutLine: {'line': b'running install_data\n'}
+[1.995996] (final_race_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.998479] (final_race_pkg) StdoutLine: {'line': b"removing '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages/final_race_pkg-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.999439] (final_race_pkg) StdoutLine: {'line': b'Copying ../../build/final_race_pkg/final_race_pkg.egg-info to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages/final_race_pkg-0.0.0-py3.8.egg-info\n'}
+[2.003987] (final_race_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[2.010271] (-) TimerEvent: {}
+[2.027035] (final_race_pkg) StdoutLine: {'line': b'Installing main_agent script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg\n'}
+[2.027314] (final_race_pkg) StdoutLine: {'line': b'Installing opp_agent script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg\n'}
+[2.027441] (final_race_pkg) StdoutLine: {'line': b'Installing pure_pursuit_node script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg\n'}
+[2.027550] (final_race_pkg) StdoutLine: {'line': b'Installing traj_killer script to /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/final_race_pkg\n'}
+[2.027845] (final_race_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log'\n"}
+[2.068522] (final_race_pkg) CommandEnded: {'returncode': 0}
+[2.110415] (-) TimerEvent: {}
+[2.218364] (-) TimerEvent: {}
+[2.224620] (final_race_pkg) JobEnded: {'identifier': 'final_race_pkg', 'rc': 0}
+[2.318504] (-) TimerEvent: {}
+[2.418905] (-) TimerEvent: {}
+[2.519263] (-) TimerEvent: {}
+[2.619593] (-) TimerEvent: {}
+[2.719805] (-) TimerEvent: {}
+[2.828518] (-) TimerEvent: {}
+[2.929395] (-) TimerEvent: {}
+[3.029743] (-) TimerEvent: {}
+[3.129950] (-) TimerEvent: {}
+[3.230161] (-) TimerEvent: {}
+[3.331371] (-) TimerEvent: {}
+[3.439857] (-) TimerEvent: {}
+[3.540403] (-) TimerEvent: {}
+[3.640597] (-) TimerEvent: {}
+[3.740801] (-) TimerEvent: {}
+[3.841413] (-) TimerEvent: {}
+[3.941610] (-) TimerEvent: {}
+[4.041872] (-) TimerEvent: {}
+[4.142086] (-) TimerEvent: {}
+[4.242323] (-) TimerEvent: {}
+[4.342516] (-) TimerEvent: {}
+[4.443018] (-) TimerEvent: {}
+[4.543213] (-) TimerEvent: {}
+[4.643397] (-) TimerEvent: {}
+[4.743621] (-) TimerEvent: {}
+[4.843857] (-) TimerEvent: {}
+[4.944092] (-) TimerEvent: {}
+[5.044314] (-) TimerEvent: {}
+[5.144577] (-) TimerEvent: {}
+[5.244814] (-) TimerEvent: {}
+[5.345119] (-) TimerEvent: {}
+[5.446108] (-) TimerEvent: {}
+[5.546361] (-) TimerEvent: {}
+[5.646697] (-) TimerEvent: {}
+[5.748457] (-) TimerEvent: {}
+[5.849203] (-) TimerEvent: {}
+[5.955632] (-) TimerEvent: {}
+[6.057516] (-) TimerEvent: {}
+[6.157840] (-) TimerEvent: {}
+[6.258105] (-) TimerEvent: {}
+[6.358298] (-) TimerEvent: {}
+[6.458677] (-) TimerEvent: {}
+[6.558874] (-) TimerEvent: {}
+[6.659141] (-) TimerEvent: {}
+[6.759435] (-) TimerEvent: {}
+[6.859687] (-) TimerEvent: {}
+[6.959912] (-) TimerEvent: {}
+[7.060203] (-) TimerEvent: {}
+[7.160438] (-) TimerEvent: {}
+[7.262352] (-) TimerEvent: {}
+[7.364804] (-) TimerEvent: {}
+[7.465032] (-) TimerEvent: {}
+[7.566288] (-) TimerEvent: {}
+[7.666476] (-) TimerEvent: {}
+[7.766688] (-) TimerEvent: {}
+[7.866873] (-) TimerEvent: {}
+[7.967071] (-) TimerEvent: {}
+[8.067269] (-) TimerEvent: {}
+[8.167505] (-) TimerEvent: {}
+[8.268254] (-) TimerEvent: {}
+[8.371582] (-) TimerEvent: {}
+[8.471999] (-) TimerEvent: {}
+[8.572256] (-) TimerEvent: {}
+[8.672468] (-) TimerEvent: {}
+[8.772708] (-) TimerEvent: {}
+[8.872978] (-) TimerEvent: {}
+[8.973308] (-) TimerEvent: {}
+[9.073511] (-) TimerEvent: {}
+[9.174641] (-) TimerEvent: {}
+[9.274849] (-) TimerEvent: {}
+[9.375028] (-) TimerEvent: {}
+[9.475250] (-) TimerEvent: {}
+[9.575476] (-) TimerEvent: {}
+[9.675746] (-) TimerEvent: {}
+[9.775996] (-) TimerEvent: {}
+[9.876339] (-) TimerEvent: {}
+[9.976728] (-) TimerEvent: {}
+[10.076930] (-) TimerEvent: {}
+[10.177143] (-) TimerEvent: {}
+[10.277387] (-) TimerEvent: {}
+[10.377666] (-) TimerEvent: {}
+[10.478014] (-) TimerEvent: {}
+[10.578245] (-) TimerEvent: {}
+[10.678589] (-) TimerEvent: {}
+[10.778914] (-) TimerEvent: {}
+[10.879110] (-) TimerEvent: {}
+[10.979330] (-) TimerEvent: {}
+[11.079570] (-) TimerEvent: {}
+[11.180630] (-) TimerEvent: {}
+[11.281379] (-) TimerEvent: {}
+[11.381628] (-) TimerEvent: {}
+[11.482516] (-) TimerEvent: {}
+[11.582694] (-) TimerEvent: {}
+[11.682892] (-) TimerEvent: {}
+[11.791983] (-) TimerEvent: {}
+[11.892353] (-) TimerEvent: {}
+[11.992548] (-) TimerEvent: {}
+[12.092732] (-) TimerEvent: {}
+[12.192933] (-) TimerEvent: {}
+[12.293142] (-) TimerEvent: {}
+[12.393436] (-) TimerEvent: {}
+[12.494422] (-) TimerEvent: {}
+[12.594619] (-) TimerEvent: {}
+[12.694802] (-) TimerEvent: {}
+[12.795169] (-) TimerEvent: {}
+[12.895346] (-) TimerEvent: {}
+[12.995559] (-) TimerEvent: {}
+[13.095754] (-) TimerEvent: {}
+[13.195964] (-) TimerEvent: {}
+[13.296491] (-) TimerEvent: {}
+[13.397164] (-) TimerEvent: {}
+[13.497461] (-) TimerEvent: {}
+[13.515220] (opponent_predictor) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX executable opponent_predictor_node\x1b[0m\n'}
+[13.598241] (-) TimerEvent: {}
+[13.698430] (-) TimerEvent: {}
+[13.798648] (-) TimerEvent: {}
+[13.898869] (-) TimerEvent: {}
+[13.999062] (-) TimerEvent: {}
+[14.099255] (-) TimerEvent: {}
+[14.199475] (-) TimerEvent: {}
+[14.299665] (-) TimerEvent: {}
+[14.399858] (-) TimerEvent: {}
+[14.501394] (-) TimerEvent: {}
+[14.601628] (-) TimerEvent: {}
+[14.701827] (-) TimerEvent: {}
+[14.802825] (-) TimerEvent: {}
+[14.903141] (-) TimerEvent: {}
+[14.988849] (opponent_predictor) StdoutLine: {'line': b'[100%] Built target opponent_predictor_node\n'}
+[15.003275] (-) TimerEvent: {}
+[15.011435] (opponent_predictor) CommandEnded: {'returncode': 0}
+[15.100176] (opponent_predictor) JobProgress: {'identifier': 'opponent_predictor', 'progress': 'install'}
+[15.100302] (opponent_predictor) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor'], 'cwd': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros2'), ('SSH_AGENT_PID', '2082'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1410'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:39131'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros2/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2:@/tmp/.ICE-unix/2125,unix/ros2:/tmp/.ICE-unix/2125'), ('INVOCATION_ID', '7dbe9aa4a5c644ccaa41b270f0026117'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5b22d27a_8560_4a19_90c0_c8fa015e604f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.72'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '6'), ('AMENT_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy')]), 'shell': False}
+[15.103974] (-) TimerEvent: {}
+[15.120026] (opponent_predictor) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.124629] (opponent_predictor) StdoutLine: {'line': b'-- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/opponent_predictor/opponent_predictor_node\n'}
+[15.129658] (opponent_predictor) StdoutLine: {'line': b'-- Set runtime path of "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/opponent_predictor/opponent_predictor_node" to ""\n'}
+[15.132253] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/pythonpath.sh\n'}
+[15.132314] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/pythonpath.dsv\n'}
+[15.133005] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages/opponent_predictor\n'}
+[15.133221] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages/opponent_predictor/__init__.py\n'}
+[15.205411] (-) TimerEvent: {}
+[15.224717] (opponent_predictor) StdoutLine: {'line': b"Listing '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages/opponent_predictor'...\n"}
+[15.228009] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/opponent_predictor/opponent_predictor_node.py\n'}
+[15.228180] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/launch\n'}
+[15.228629] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/launch/opponent_predictor_launch.py\n'}
+[15.229474] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/ament_index/resource_index/package_run_dependencies/opponent_predictor\n'}
+[15.229840] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/ament_index/resource_index/parent_prefix_path/opponent_predictor\n'}
+[15.231497] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/ament_prefix_path.sh\n'}
+[15.231617] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/ament_prefix_path.dsv\n'}
+[15.231722] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/path.sh\n'}
+[15.231817] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/path.dsv\n'}
+[15.231905] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.bash\n'}
+[15.231993] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.sh\n'}
+[15.232086] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.zsh\n'}
+[15.232173] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.dsv\n'}
+[15.232295] (opponent_predictor) StdoutLine: {'line': b'-- Installing: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.dsv\n'}
+[15.232678] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/ament_index/resource_index/packages/opponent_predictor\n'}
+[15.232985] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/cmake/opponent_predictorConfig.cmake\n'}
+[15.233081] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/cmake/opponent_predictorConfig-version.cmake\n'}
+[15.233359] (opponent_predictor) StdoutLine: {'line': b'-- Up-to-date: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.xml\n'}
+[15.234572] (opponent_predictor) CommandEnded: {'returncode': 0}
+[15.305532] (-) TimerEvent: {}
+[15.406008] (-) TimerEvent: {}
+[15.506713] (-) TimerEvent: {}
+[15.607839] (-) TimerEvent: {}
+[15.671504] (opponent_predictor) JobEnded: {'identifier': 'opponent_predictor', 'rc': 0}
+[15.671925] (-) EventReactorShutdown: {}

@@ -1,0 +1,523 @@
+[1.987s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.987s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff95675490>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=2, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff95675490>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff95675220>)
+[2.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.113s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox'
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extensions ['ignore', 'ignore_ament_install']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extension 'ignore'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extension 'ignore_ament_install'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extensions ['colcon_pkg']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extension 'colcon_pkg'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extensions ['colcon_meta']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extension 'colcon_meta'
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extensions ['ros']
+[2.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/dummy_car) by extension 'ros'
+[2.137s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dummy_car' with type 'ros.ament_cmake' and name 'dummy_car'
+[2.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extensions ['ignore', 'ignore_ament_install']
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extension 'ignore'
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extension 'ignore_ament_install'
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extensions ['colcon_pkg']
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extension 'colcon_pkg'
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extensions ['colcon_meta']
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extension 'colcon_meta'
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extensions ['ros']
+[2.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_race_pkg) by extension 'ros'
+[2.139s] DEBUG:colcon.colcon_core.package_identification:Package 'src/final_race_pkg' with type 'ros.ament_python' and name 'final_race_pkg'
+[2.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extensions ['ignore', 'ignore_ament_install']
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extension 'ignore'
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extension 'ignore_ament_install'
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extensions ['colcon_pkg']
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extension 'colcon_pkg'
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extensions ['colcon_meta']
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extension 'colcon_meta'
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extensions ['ros']
+[2.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/opponent_predictor) by extension 'ros'
+[2.141s] DEBUG:colcon.colcon_core.package_identification:Package 'src/opponent_predictor' with type 'ros.ament_cmake' and name 'opponent_predictor'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extensions ['ignore', 'ignore_ament_install']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'ignore'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'ignore_ament_install'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extensions ['colcon_pkg']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'colcon_pkg'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extensions ['colcon_meta']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'colcon_meta'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extensions ['ros']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'ros'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extensions ['cmake', 'python']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'cmake'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'python'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extensions ['python_setup_py']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator) by extension 'python_setup_py'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extensions ['ignore', 'ignore_ament_install']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'ignore'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'ignore_ament_install'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extensions ['colcon_pkg']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'colcon_pkg'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extensions ['colcon_meta']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'colcon_meta'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extensions ['ros']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'ros'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extensions ['cmake', 'python']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'cmake'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'python'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extensions ['python_setup_py']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/config) by extension 'python_setup_py'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extensions ['ignore', 'ignore_ament_install']
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'ignore'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'ignore_ament_install'
+[2.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extensions ['colcon_pkg']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'colcon_pkg'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extensions ['colcon_meta']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'colcon_meta'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extensions ['ros']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'ros'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extensions ['cmake', 'python']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'cmake'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'python'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extensions ['python_setup_py']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap) by extension 'python_setup_py'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extensions ['ignore', 'ignore_ament_install']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'ignore'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'ignore_ament_install'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extensions ['colcon_pkg']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'colcon_pkg'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extensions ['colcon_meta']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'colcon_meta'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extensions ['ros']
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'ros'
+[2.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extensions ['cmake', 'python']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'cmake'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'python'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extensions ['python_setup_py']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/frictionmap/src) by extension 'python_setup_py'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extensions ['ignore', 'ignore_ament_install']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'ignore'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'ignore_ament_install'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extensions ['colcon_pkg']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'colcon_pkg'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extensions ['colcon_meta']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'colcon_meta'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extensions ['ros']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'ros'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extensions ['cmake', 'python']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'cmake'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'python'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extensions ['python_setup_py']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob) by extension 'python_setup_py'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extensions ['ignore', 'ignore_ament_install']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'ignore'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'ignore_ament_install'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extensions ['colcon_pkg']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'colcon_pkg'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extensions ['colcon_meta']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'colcon_meta'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extensions ['ros']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'ros'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extensions ['cmake', 'python']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'cmake'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'python'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extensions ['python_setup_py']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/helper_funcs_glob/src) by extension 'python_setup_py'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extensions ['ignore', 'ignore_ament_install']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'ignore'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'ignore_ament_install'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extensions ['colcon_pkg']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'colcon_pkg'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extensions ['colcon_meta']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'colcon_meta'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extensions ['ros']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'ros'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extensions ['cmake', 'python']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'cmake'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'python'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extensions ['python_setup_py']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs) by extension 'python_setup_py'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extensions ['ignore', 'ignore_ament_install']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'ignore'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'ignore_ament_install'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extensions ['colcon_pkg']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'colcon_pkg'
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extensions ['colcon_meta']
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'colcon_meta'
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extensions ['ros']
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'ros'
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extensions ['cmake', 'python']
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'cmake'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'python'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extensions ['python_setup_py']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/frictionmaps) by extension 'python_setup_py'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extensions ['ignore', 'ignore_ament_install']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'ignore'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'ignore_ament_install'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extensions ['colcon_pkg']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'colcon_pkg'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extensions ['colcon_meta']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'colcon_meta'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extensions ['ros']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'ros'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extensions ['cmake', 'python']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'cmake'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'python'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extensions ['python_setup_py']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/tracks) by extension 'python_setup_py'
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extensions ['ignore', 'ignore_ament_install']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'ignore'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'ignore_ament_install'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extensions ['colcon_pkg']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'colcon_pkg'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extensions ['colcon_meta']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'colcon_meta'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extensions ['ros']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'ros'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extensions ['cmake', 'python']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'cmake'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'python'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extensions ['python_setup_py']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/inputs/veh_dyn_info) by extension 'python_setup_py'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extensions ['ignore', 'ignore_ament_install']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'ignore'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'ignore_ament_install'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extensions ['colcon_pkg']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'colcon_pkg'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extensions ['colcon_meta']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'colcon_meta'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extensions ['ros']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'ros'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extensions ['cmake', 'python']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'cmake'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'python'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extensions ['python_setup_py']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/maps) by extension 'python_setup_py'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extensions ['ignore', 'ignore_ament_install']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'ignore'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'ignore_ament_install'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extensions ['colcon_pkg']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'colcon_pkg'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extensions ['colcon_meta']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'colcon_meta'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extensions ['ros']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'ros'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extensions ['cmake', 'python']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'cmake'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'python'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extensions ['python_setup_py']
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj) by extension 'python_setup_py'
+[2.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extensions ['ignore', 'ignore_ament_install']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'ignore'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'ignore_ament_install'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extensions ['colcon_pkg']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'colcon_pkg'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extensions ['colcon_meta']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'colcon_meta'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extensions ['ros']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'ros'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extensions ['cmake', 'python']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'cmake'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'python'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extensions ['python_setup_py']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src) by extension 'python_setup_py'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extensions ['ignore', 'ignore_ament_install']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'ignore'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'ignore_ament_install'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extensions ['colcon_pkg']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'colcon_pkg'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extensions ['colcon_meta']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'colcon_meta'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extensions ['ros']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'ros'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extensions ['cmake', 'python']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'cmake'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'python'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extensions ['python_setup_py']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/powertrain_src/src) by extension 'python_setup_py'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extensions ['ignore', 'ignore_ament_install']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'ignore'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'ignore_ament_install'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extensions ['colcon_pkg']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'colcon_pkg'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extensions ['colcon_meta']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'colcon_meta'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extensions ['ros']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'ros'
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extensions ['cmake', 'python']
+[2.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'cmake'
+[2.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'python'
+[2.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extensions ['python_setup_py']
+[2.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/opt_mintime_traj/src) by extension 'python_setup_py'
+[2.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extensions ['ignore', 'ignore_ament_install']
+[2.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'ignore'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'ignore_ament_install'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extensions ['colcon_pkg']
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'colcon_pkg'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extensions ['colcon_meta']
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'colcon_meta'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extensions ['ros']
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'ros'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extensions ['cmake', 'python']
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'cmake'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'python'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extensions ['python_setup_py']
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs) by extension 'python_setup_py'
+[2.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extensions ['ignore', 'ignore_ament_install']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'ignore'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'ignore_ament_install'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extensions ['colcon_pkg']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'colcon_pkg'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extensions ['colcon_meta']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'colcon_meta'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extensions ['ros']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'ros'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extensions ['cmake', 'python']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'cmake'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'python'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extensions ['python_setup_py']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/outputs/final2024) by extension 'python_setup_py'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extensions ['ignore', 'ignore_ament_install']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'ignore'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'ignore_ament_install'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extensions ['colcon_pkg']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'colcon_pkg'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extensions ['colcon_meta']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'colcon_meta'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extensions ['ros']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'ros'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extensions ['cmake', 'python']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'cmake'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'python'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extensions ['python_setup_py']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/trajectory_generator/params) by extension 'python_setup_py'
+[2.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.376s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.446s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install
+[2.474s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 267 installed packages in /opt/ros/foxy
+[2.475s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'cmake_args' from command line to 'None'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'cmake_target' from command line to 'None'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'cmake_clean_cache' from command line to 'False'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'cmake_clean_first' from command line to 'False'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'cmake_force_configure' from command line to 'False'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'ament_cmake_args' from command line to 'None'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'catkin_cmake_args' from command line to 'None'
+[2.648s] Level 5:colcon.colcon_core.verb:set package 'dummy_car' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.648s] DEBUG:colcon.colcon_core.verb:Building package 'dummy_car' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car', 'merge_install': False, 'path': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/dummy_car', 'symlink_install': False, 'test_result_base': None}
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'cmake_args' from command line to 'None'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'cmake_target' from command line to 'None'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[2.680s] Level 5:colcon.colcon_core.verb:set package 'final_race_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.680s] DEBUG:colcon.colcon_core.verb:Building package 'final_race_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg', 'merge_install': False, 'path': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg', 'symlink_install': False, 'test_result_base': None}
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'cmake_args' from command line to 'None'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'cmake_target' from command line to 'None'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'cmake_clean_cache' from command line to 'False'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'cmake_clean_first' from command line to 'False'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'cmake_force_configure' from command line to 'False'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'ament_cmake_args' from command line to 'None'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'catkin_cmake_args' from command line to 'None'
+[2.709s] Level 5:colcon.colcon_core.verb:set package 'opponent_predictor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.709s] DEBUG:colcon.colcon_core.verb:Building package 'opponent_predictor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor', 'merge_install': False, 'path': '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor', 'symlink_install': False, 'test_result_base': None}
+[2.754s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.787s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.787s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/dummy_car' with build type 'ament_cmake'
+[2.788s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/dummy_car'
+[2.822s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.822s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.822s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.933s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg' with build type 'ament_python'
+[2.934s] Level 1:colcon.colcon_core.shell:create_environment_hook('final_race_pkg', 'ament_prefix_path')
+[2.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/hook/ament_prefix_path.ps1'
+[2.980s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/hook/ament_prefix_path.dsv'
+[2.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/hook/ament_prefix_path.sh'
+[3.026s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.026s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car -- -j2 -l2
+[3.379s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg'
+[3.426s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.426s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.537s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car -- -j2 -l2
+[3.616s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car
+[3.673s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dummy_car)
+[3.676s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car
+[3.732s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car' for CMake module files
+[3.732s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car' for CMake config files
+[3.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_car', 'cmake_prefix_path')
+[3.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/cmake_prefix_path.ps1'
+[3.784s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/cmake_prefix_path.dsv'
+[3.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/cmake_prefix_path.sh'
+[3.784s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib'
+[3.784s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/bin'
+[3.784s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/pkgconfig/dummy_car.pc'
+[3.784s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages'
+[3.784s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_car', 'pythonpath')
+[3.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/pythonpath.ps1'
+[3.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/pythonpath.dsv'
+[3.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/pythonpath.sh'
+[3.869s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/bin'
+[3.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.ps1'
+[3.919s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.dsv'
+[3.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.sh'
+[3.921s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.bash'
+[3.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.zsh'
+[3.923s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/colcon-core/packages/dummy_car)
+[4.005s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dummy_car)
+[4.058s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car' for CMake module files
+[4.071s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car' for CMake config files
+[4.071s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_car', 'cmake_prefix_path')
+[4.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/cmake_prefix_path.ps1'
+[4.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/cmake_prefix_path.dsv'
+[4.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/cmake_prefix_path.sh'
+[4.133s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib'
+[4.133s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/bin'
+[4.133s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/pkgconfig/dummy_car.pc'
+[4.133s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/lib/python3.8/site-packages'
+[4.133s] Level 1:colcon.colcon_core.shell:create_environment_hook('dummy_car', 'pythonpath')
+[4.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/pythonpath.ps1'
+[4.200s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/pythonpath.dsv'
+[4.200s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/hook/pythonpath.sh'
+[4.201s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/bin'
+[4.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.ps1'
+[4.264s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.dsv'
+[4.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.sh'
+[4.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.bash'
+[4.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/dummy_car/package.zsh'
+[4.266s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/dummy_car/share/colcon-core/packages/dummy_car)
+[4.268s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor' with build type 'ament_cmake'
+[4.268s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor'
+[4.349s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.349s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg': PYTHONPATH=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/prefix_override:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/final_race_pkg build --build-base /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/build install --record /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log --install-scripts $base/lib/final_race_pkg --single-version-externally-managed
+[4.509s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor -- -j2 -l2
+[4.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg' returned '0': PYTHONPATH=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/prefix_override:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/final_race_pkg build --build-base /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/build install --record /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/final_race_pkg/install.log --install-scripts $base/lib/final_race_pkg --single-version-externally-managed
+[4.893s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg' for CMake module files
+[4.894s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg' for CMake config files
+[4.897s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib'
+[4.897s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/bin'
+[4.897s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/pkgconfig/final_race_pkg.pc'
+[4.897s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/lib/python3.8/site-packages'
+[4.897s] Level 1:colcon.colcon_core.shell:create_environment_hook('final_race_pkg', 'pythonpath')
+[4.940s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/hook/pythonpath.ps1'
+[4.942s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/hook/pythonpath.dsv'
+[4.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/hook/pythonpath.sh'
+[4.949s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/bin'
+[4.949s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(final_race_pkg)
+[5.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/package.ps1'
+[5.017s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/package.dsv'
+[5.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/package.sh'
+[5.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/package.bash'
+[5.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/final_race_pkg/package.zsh'
+[5.018s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg/share/colcon-core/packages/final_race_pkg)
+[17.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor -- -j2 -l2
+[17.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor
+[18.028s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(opponent_predictor)
+[18.028s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor
+[18.151s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor' for CMake module files
+[18.151s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor' for CMake config files
+[18.152s] Level 1:colcon.colcon_core.shell:create_environment_hook('opponent_predictor', 'cmake_prefix_path')
+[18.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/cmake_prefix_path.ps1'
+[18.181s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/cmake_prefix_path.dsv'
+[18.182s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/cmake_prefix_path.sh'
+[18.184s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib'
+[18.184s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/bin'
+[18.184s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/pkgconfig/opponent_predictor.pc'
+[18.184s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages'
+[18.184s] Level 1:colcon.colcon_core.shell:create_environment_hook('opponent_predictor', 'pythonpath')
+[18.222s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/pythonpath.ps1'
+[18.222s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/pythonpath.dsv'
+[18.222s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/pythonpath.sh'
+[18.222s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/bin'
+[18.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.ps1'
+[18.264s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.dsv'
+[18.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.sh'
+[18.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.bash'
+[18.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.zsh'
+[18.270s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/colcon-core/packages/opponent_predictor)
+[18.335s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(opponent_predictor)
+[18.362s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor' for CMake module files
+[18.363s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor' for CMake config files
+[18.364s] Level 1:colcon.colcon_core.shell:create_environment_hook('opponent_predictor', 'cmake_prefix_path')
+[18.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/cmake_prefix_path.ps1'
+[18.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/cmake_prefix_path.dsv'
+[18.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/cmake_prefix_path.sh'
+[18.394s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib'
+[18.394s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/bin'
+[18.394s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/pkgconfig/opponent_predictor.pc'
+[18.394s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages'
+[18.394s] Level 1:colcon.colcon_core.shell:create_environment_hook('opponent_predictor', 'pythonpath')
+[18.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/pythonpath.ps1'
+[18.429s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/pythonpath.dsv'
+[18.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/hook/pythonpath.sh'
+[18.429s] Level 1:colcon.colcon_core.environment:checking '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/bin'
+[18.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.ps1'
+[18.462s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.dsv'
+[18.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.sh'
+[18.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.bash'
+[18.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.zsh'
+[18.464s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/colcon-core/packages/opponent_predictor)
+[18.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[18.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[18.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[18.465s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[18.536s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[18.536s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[18.537s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[18.613s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[18.635s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/local_setup.ps1'
+[18.636s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/_local_setup_util_ps1.py'
+[18.637s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/setup.ps1'
+[18.663s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/local_setup.sh'
+[18.663s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/_local_setup_util_sh.py'
+[18.663s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/setup.sh'
+[18.688s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/local_setup.bash'
+[18.688s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/setup.bash'
+[18.713s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/local_setup.zsh'
+[18.713s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/setup.zsh'

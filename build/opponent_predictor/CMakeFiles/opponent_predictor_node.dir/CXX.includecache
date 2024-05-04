@@ -30,26 +30,10 @@ opencv2/imgcodecs.hpp
 opencv2/imgproc.hpp
 -
 
-/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/cluster.cpp
-opponent_predictor.h
-/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/opponent_predictor.h
-
 /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/opponent_predictor.cpp
 fstream
 -
 cmath
--
-opponent_predictor.h
-/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/opponent_predictor.h
-
-/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/opponent_predictor_node.cpp
-rclcpp/rclcpp.hpp
--
-opponent_predictor.h
-/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/opponent_predictor.h
-
-/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/visualization.cpp
-opencv2/highgui.hpp
 -
 opponent_predictor.h
 /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/src/opponent_predictor.h

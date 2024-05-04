@@ -39,6 +39,9 @@ OpponentPredictor::OpponentPredictor() : Node("opponent_predictor_node") {
     // General Variables
     //real_test = this->get_parameter("real_test").as_bool();
     //real_test= false;
+    cout<<"real_test: "<<real_test<<endl;
+    real_test=0;
+    cout<<"real_test: "<<real_test<<endl;
     
 
     if (real_test) {
