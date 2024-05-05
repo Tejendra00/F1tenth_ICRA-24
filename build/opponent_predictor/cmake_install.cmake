@@ -38,35 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor" TYPE EXECUTABLE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/opponent_predictor_node")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node"
-         OLD_RPATH "/opt/ros/foxy/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor/opponent_predictor_node")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/environment" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/pythonpath.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/environment" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/pythonpath.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/opponent_predictor" TYPE DIRECTORY FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/opponent_predictor/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
+  include("/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -75,73 +47,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
         "/usr/bin/python3" "-m" "compileall"
         "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages/opponent_predictor"
       )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opponent_predictor" TYPE PROGRAM FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/scripts/opponent_predictor_node.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE DIRECTORY FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/launch")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/opponent_predictor")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/opponent_predictor")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/environment" TYPE FILE FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/environment" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/environment" TYPE FILE FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/environment" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_index/share/ament_index/resource_index/packages/opponent_predictor")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor/cmake" TYPE FILE FILES
-    "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_core/opponent_predictorConfig.cmake"
-    "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/ament_cmake_core/opponent_predictorConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/opponent_predictor" TYPE FILE FILES "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

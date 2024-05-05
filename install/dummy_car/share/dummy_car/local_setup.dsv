@@ -1,3 +1,1 @@
-source;share/dummy_car/environment/ament_prefix_path.sh
-source;share/dummy_car/environment/path.sh
-source;share/dummy_car/environment/pythonpath.sh
+/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/dummy_car/ament_cmake_environment_hooks/local_setup.dsv

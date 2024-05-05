@@ -7,7 +7,7 @@ import math
 import numpy as np
 from sensor_msgs.msg import LaserScan
 from ackermann_msgs.msg import AckermannDriveStamped, AckermannDrive
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, Pose, PoseArray
 from nav_msgs.msg import Odometry
 from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Point
@@ -43,6 +43,14 @@ class PurePursuit(Node):
         self.declare_parameter('kd', 0.005)
         self.declare_parameter("max_control", MAX_STEER)
         self.declare_parameter("steer_alpha", 1.0)
+        self.declare_parameter("num_lanes")
+        self.declare_parameter('avoid_v_diff')
+        self.declare_parameter('avoid_L_scale')
+        self.declare_parameter('pred_v_buffer')
+        self.declare_parameter('avoid_buffer')
+        self.declare_parameter('avoid_span')
+        self.declare_parameter("lane_occupied_dist")
+        self.declare_parameter("obs_activate_dist")
 
         print("finished declaring parameters")
         # PID Control Params
@@ -64,6 +72,26 @@ class PurePursuit(Node):
         self.v_min = np.min(self.v_list)
         print("finished loading waypoints")
 
+        self.num_lanes = self.get_parameter("num_lanes").get_parameter_value().integer_value
+
+        self.obstacles = None
+        self.opponent = np.array([np.inf, np.inf])
+        self.lane_free = [True] * self.num_lanes
+        self.declare_parameter('avoid_dist')
+        self.opponent_v = 0.0
+        self.opponent_last = np.array([0.0, 0.0])
+        self.opponent_timestamp = 0.0
+        self.pred_v_buffer = self.get_parameter('pred_v_buffer').get_parameter_value().integer_value
+        self.pred_v_counter = 0
+        self.avoid_buffer = self.get_parameter('avoid_buffer').get_parameter_value().integer_value
+        self.avoid_counter = 0
+        self.detect_oppo = False
+        self.avoid_L_scale = self.get_parameter('avoid_L_scale').get_parameter_value().double_value
+        self.last_lane = -1
+        
+
+        
+
         # Topics & Subs, Pubs
         
         if self.flag == True:  
@@ -77,6 +105,11 @@ class PurePursuit(Node):
         drive_topic = '/drive'
         waypoint_topic = '/waypoint'
         waypoint_path_topic = '/waypoint_path'
+        obstacle_topic = "/opp_predict/bbox"
+        opponent_topic = "/opp_predict/state"
+
+        self.obstacle_sub_ = self.create_subscription(PoseArray, obstacle_topic, self.obstacle_callback, 1)
+        self.opponent_sub_ = self.create_subscription(PoseStamped, opponent_topic, self.opponent_callback, 1)
 
         self.traj_published = False
         self.drive_pub_ = self.create_publisher(AckermannDriveStamped, drive_topic, 10)
@@ -85,8 +118,60 @@ class PurePursuit(Node):
         print("waypoint_pub_ initialized, topic: " + waypoint_topic)
         self.waypoint_path_pub_ = self.create_publisher(Marker, waypoint_path_topic, 10)
         print("waypoint_path_pub_ initialized, topic: " + waypoint_path_topic)
+       
+        
         
 ########################################### Callback ############################################
+
+    def obstacle_callback(self, obstacle_msg: PoseArray):
+        obstacle_list = []
+        for obstacle in obstacle_msg.poses:
+            x = obstacle.position.x
+            y = obstacle.position.y
+            obstacle_list.append([x, y])
+        self.obstacles = np.array(obstacle_list) if obstacle_list else None
+
+        if self.obstacles is None:
+            self.lane_free = np.array([True] * self.num_lanes)
+            return
+
+        lane_occupied_dist = self.get_parameter("lane_occupied_dist").get_parameter_value().double_value
+        for i in range(self.num_lanes):
+            d = scipy.spatial.distance.cdist(self.lane_pos[i], self.obstacles)
+            self.lane_free[i] = (np.min(d) > lane_occupied_dist)
+        #print(f'lane_free_situation {self.lane_free}')
+
+
+    def opponent_callback(self, opponent_msg: PoseStamped):
+        opponent_x = opponent_msg.pose.position.x
+        opponent_y = opponent_msg.pose.position.y
+        self.opponent = np.array([opponent_x, opponent_y])
+        # print(self.opponent)
+
+        ## velocity
+        if not np.any(np.isinf(self.opponent)):
+            #print(self.detect_oppo)
+            if self.detect_oppo:
+                oppoent_dist_diff = np.linalg.norm(self.opponent - self.opponent_last)
+                # self.opponent_v = 0.0
+                # if oppoent_dist_diff != 0:
+                if self.pred_v_counter == 7:
+                    self.pred_v_counter = 0
+                    cur_time = opponent_msg.header.stamp.nanosec/1e9 + opponent_msg.header.stamp.sec
+                    time_interval = cur_time - self.opponent_timestamp
+                    self.opponent_timestamp = cur_time
+                    opponent_v = oppoent_dist_diff / max(time_interval, 0.005)
+                    self.opponent_last = self.opponent.copy()
+                    self.opponent_v = opponent_v
+                    # print(f'cur distance diff {oppoent_dist_diff}')
+                    print(f'cur oppoent v {self.opponent_v}')
+                else:
+                    self.pred_v_counter += 1
+            else:
+                self.detect_oppo = True
+                self.opponent_last = self.opponent.copy()
+        else:
+            self.detect_oppo = False
         
     def pose_callback(self, pose_msg):
         if self.flag == True:  
@@ -120,7 +205,7 @@ class PurePursuit(Node):
         message = AckermannDriveStamped()
         message.drive.speed = target_v
         message.drive.steering_angle = self.get_steer(error)
-        self.get_logger().info('speed: %f, steer: %f' % (target_v, self.get_steer(error)))
+        #self.get_logger().info('speed: %f, steer: %f' % (target_v, self.get_steer(error)))
         self.drive_pub_.publish(message)
 
         # remember to visualize the waypoints
@@ -218,3 +303,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+

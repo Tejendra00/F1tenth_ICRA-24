@@ -330,7 +330,7 @@ class CurvePlotterNode(Node, QMainWindow):
         markers = ['^', '*']  # Triangle and star markers
         colors = ['blue', 'red']  # Colors for the different curves' waypoints
 
-        for curve_index in range(1):
+        for curve_index in range(2):
             points = self.curves[curve_index]['points']
             if not points:
                 continue

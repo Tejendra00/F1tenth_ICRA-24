@@ -16,6 +16,7 @@ from .util import *
 
 # get the file path for this package
 csv_loc = '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/curve1.csv'
+csv_loc2 = '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/curve2.csv'
 
 #  Constants from xacro
 WIDTH = 0.2032  # (m)
@@ -57,19 +58,36 @@ class PurePursuit(Node):
         self.prev_error = 0.0
         self.integral = 0.0
         self.prev_steer = 0.0
+
+        self.flag_curve = False
         
         self.flag = False
         print("if real world test? ", self.flag)
 
         # TODO: Get target x and y from pre-calculated waypoints
-        waypoints = np.loadtxt(csv_loc, delimiter=',',skiprows=1)
-        self.x_list = waypoints[:, 0]
-        self.y_list = waypoints[:, 1]
-        self.v_list = waypoints[:, 2]
-        self.xyv_list = waypoints[:, 0:2]   # (x,y,v)
-        self.yaw_list = waypoints[:, 3]
+        # waypoints = np.loadtxt(csv_loc, delimiter=',',skiprows=1)
+        self.waypoints_curve1 = np.loadtxt(csv_loc, delimiter=',', skiprows=1)
+        self.waypoints_curve2 = np.loadtxt(csv_loc2, delimiter=',', skiprows=1)
+        self.current_waypoints = self.waypoints_curve1  # Start with curve 1
+
+        self.x_list = self.current_waypoints[:, 0]
+        self.y_list = self.current_waypoints[:, 1]
+        self.v_list = self.current_waypoints[:, 2]
+        self.xyv_list = self.current_waypoints[:, 0:2]   # (x,y,v)
+        self.yaw_list = self.current_waypoints[:, 3]
         self.v_max = np.max(self.v_list)
         self.v_min = np.min(self.v_list)
+
+        self.x_list_2 = self.waypoints_curve2[:, 0]
+        self.y_list_2 = self.waypoints_curve2[:, 1]
+        self.v_list_2 = self.waypoints_curve2[:, 2]
+        # self.xyv_list_2 = self.waypoints_curve2[:, 0:3]   # (x,y,v)
+        # self.yaw_list_2 = self.waypoints_curve2[:, 3]
+        # self.v_max_2 = np.max(self.v_list_2)
+        # self.v_min_2 = np.min(self.v_list_2)
+        self.curr_pos = np.array([0, 0])
+        self.curr_yaw = 0.0
+
         print("finished loading waypoints")
 
         self.num_lanes = self.get_parameter("num_lanes").get_parameter_value().integer_value
@@ -172,6 +190,22 @@ class PurePursuit(Node):
                 self.opponent_last = self.opponent.copy()
         else:
             self.detect_oppo = False
+
+    def update_current_waypoints(self):
+        # Update the current waypoint lists to the new curve
+        self.x_list = self.current_waypoints[:, 0]
+        self.y_list = self.current_waypoints[:, 1]
+        self.v_list = self.current_waypoints[:, 2]
+        self.xyv_list = self.current_waypoints[:, 0:2]  # Assuming velocity is the third column
+        self.yaw_list = self.current_waypoints[:, 3]
+        self.v_max = np.max(self.v_list)
+        self.v_min = np.min(self.v_list)
+        # print("curr_pos shape:", curr_pos.shape)
+        # print("curr_yaw shape:", curr_yaw.shape)  # This should ideally be a scalar or a 1D array with a single element
+        print("xyv_list shape:", self.xyv_list.shape)
+        print("yaw_list shape:", self.yaw_list.shape)
+        print("v_list shape:", self.v_list.shape)
+
         
     def pose_callback(self, pose_msg):
         if self.flag == True:  
@@ -182,8 +216,8 @@ class PurePursuit(Node):
             curr_x = pose_msg.pose.pose.position.x
             curr_y = pose_msg.pose.pose.position.y
             curr_quat = pose_msg.pose.pose.orientation
-        curr_pos = np.array([curr_x, curr_y])
-        curr_yaw = math.atan2(2 * (curr_quat.w * curr_quat.z + curr_quat.x * curr_quat.y),
+        self.curr_pos = np.array([curr_x, curr_y])
+        self.curr_yaw = math.atan2(2 * (curr_quat.w * curr_quat.z + curr_quat.x * curr_quat.y),
                               1 - 2 * (curr_quat.y ** 2 + curr_quat.z ** 2))
         
         # change L based on another lookahead distance for yaw difference!
@@ -195,19 +229,62 @@ class PurePursuit(Node):
         xyv_list = self.xyv_list
         yaw_list = self.yaw_list
         v_list = self.v_list
+        
+        print("Dimensions of self.curr_pos:", self.curr_pos.shape)
+        print("Dimensions of self.curr_yaw:", self.curr_yaw)
+        print("Dimensions of xyv_list:", xyv_list.shape)
+        print("Dimensions of yaw_list:", yaw_list.shape)
+        print("Dimensions of v_list:", v_list.shape)
+        print("L:", L)
+        print("lookahead_points:", lookahead_points)
+        print("lookbehind_points:", lookbehind_points)
+        print("slope:", slope)
 
-        error, target_v, target_point, curr_target_idx = get_lookahead(curr_pos, curr_yaw, xyv_list, yaw_list, v_list, L, lookahead_points, lookbehind_points, slope)
+
+
+
+        error, target_v, target_point, curr_target_idx = get_lookahead(self.curr_pos, self.curr_yaw, xyv_list, yaw_list, v_list, L, lookahead_points, lookbehind_points, slope)
 
         self.target_point = target_point
         self.curr_target_idx = curr_target_idx
-
+        
+        
         # Avoidance
+        # if self.obstacles is not None:
+        #     obstacle_dist = np.linalg.norm(self.obstacles - curr_pos, axis=1)
+        #     min_dist = np.min(obstacle_dist)
+        #     obs_activate_dist = 2.0
+        #     if min_dist < obs_activate_dist:
+        #         # target_v *= min_dist / obs_activate_dist
+        #         self.current_waypoints = self.waypoints_curve2
+
+        obs_activate_dist = 4.0
+        min_safe_dist = 0.5
         if self.obstacles is not None:
-            obstacle_dist = np.linalg.norm(self.obstacles - curr_pos, axis=1)
+            # Calculate distance from each obstacle to the current robot position
+            obstacle_dist = np.linalg.norm(self.obstacles - self.curr_pos, axis=1)            
             min_dist = np.min(obstacle_dist)
-            obs_activate_dist = 2.0
-            if min_dist < obs_activate_dist:
-                target_v *= min_dist / obs_activate_dist
+            print(f"Closest obstacle distance: {min_dist}")
+            # Check if any obstacle is closer than the activation distance
+            
+            if min_dist < min_safe_dist:
+		# Calculate a scaled speed based on the distance to the closest obstacle
+                target_v *= min_dist / min_safe_dist
+            if min_dist < obs_activate_dist and self.current_waypoints is self.waypoints_curve1:
+                self.current_waypoints = self.waypoints_curve2
+                self.update_current_waypoints()  # Update the waypoint lists
+                print("Switching to curve2 due to obstacles")
+            elif min_dist >= obs_activate_dist and self.current_waypoints is self.waypoints_curve2:
+                self.current_waypoints = self.waypoints_curve1
+                self.update_current_waypoints()  # Update the waypoint lists
+                print("Switching back to curve1, no close obstacles")
+        else:
+            if self.current_waypoints is self.waypoints_curve2:
+                self.current_waypoints = self.waypoints_curve1
+                self.update_current_waypoints()  # Update the waypoint lists
+                print("Switching back to curve1, no obstacles detected")
+
+        
         
         # TODO: publish drive message, don't forget to limit the steering angle.
         message = AckermannDriveStamped()
@@ -231,15 +308,15 @@ class PurePursuit(Node):
         marker.action = 0
         marker.points = []
         marker.colors = []
-        length = self.x_list.shape[0]
+        length = self.x_list_2.shape[0]
         for i in range(length + 1):
             this_point = Point()
-            this_point.x = self.x_list[i % length]
-            this_point.y = self.y_list[i % length]
+            this_point.x = self.x_list_2[i % length]
+            this_point.y = self.y_list_2[i % length]
             marker.points.append(this_point)
 
             this_color = ColorRGBA()
-            normalized_target_speed = (self.v_list[i % length] - self.v_min) / (self.v_max - self.v_min)
+            normalized_target_speed = (self.v_list_2[i % length] - self.v_min) / (self.v_max - self.v_min)
             this_color.a = 1.0
             this_color.r = (1 - normalized_target_speed)
             this_color.g = normalized_target_speed
@@ -311,4 +388,5 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
