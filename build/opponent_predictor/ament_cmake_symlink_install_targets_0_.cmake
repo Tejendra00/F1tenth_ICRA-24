@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor/opponent_predictor_node" "TARGETS" "opponent_predictor_node" "DESTINATION" "lib/opponent_predictor")

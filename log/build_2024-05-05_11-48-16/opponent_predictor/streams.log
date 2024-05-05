@@ -1,0 +1,63 @@
+[0.081s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor
+[0.090s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.107s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.194s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.198s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.224s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.226s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.321s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.354s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.354s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.455s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[0.455s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.479s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.533s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[0.557s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.610s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[0.674s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.707s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.711s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.711s] -- Configured cppcheck include dirs: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor/include
+[0.711s] -- Configured cppcheck exclude dirs and/or files: 
+[0.713s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.713s] -- Configured cpplint exclude dirs and/or files: 
+[0.714s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.714s] -- Added test 'lint_cmake' to check CMake code style
+[0.715s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.717s] -- Added test 'uncrustify' to check C / C++ code style
+[0.717s] -- Configured uncrustify additional arguments: 
+[0.717s] -- Added test 'xmllint' to check XML markup files
+[0.720s] -- Configuring done
+[0.738s] -- Generating done
+[0.739s] -- Build files have been written to: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor
+[0.743s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/opponent_predictor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor
+[0.745s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor -- -j2 -l2
+[0.798s] [ 20%] [32m[1mLinking CXX executable opponent_predictor_node[0m
+[1.416s] [100%] Built target opponent_predictor_node
+[1.421s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor -- -j2 -l2
+[1.436s] Invoking command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor
+[1.441s] -- Install configuration: ""
+[1.441s] -- Execute custom install script
+[1.442s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/opponent_predictor/opponent_predictor_node
+[1.447s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/pythonpath.sh
+[1.451s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/pythonpath.dsv
+[1.455s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages/opponent_predictor/__init__.py
+[1.459s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/opponent_predictor/opponent_predictor_node.py
+[1.463s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/launch/opponent_predictor_launch.py
+[1.467s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/ament_index/resource_index/package_run_dependencies/opponent_predictor
+[1.471s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/ament_index/resource_index/parent_prefix_path/opponent_predictor
+[1.475s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/ament_prefix_path.sh
+[1.479s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/ament_prefix_path.dsv
+[1.482s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/path.sh
+[1.486s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/environment/path.dsv
+[1.490s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.bash
+[1.494s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.sh
+[1.497s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.zsh
+[1.501s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/local_setup.dsv
+[1.505s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.dsv
+[1.508s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/ament_index/resource_index/packages/opponent_predictor
+[1.512s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/cmake/opponent_predictorConfig.cmake
+[1.516s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/cmake/opponent_predictorConfig-version.cmake
+[1.520s] -- Symlinking: /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/share/opponent_predictor/package.xml
+[1.539s] Listing '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/opponent_predictor/lib/python3.8/site-packages/opponent_predictor'...
+[1.542s] Invoked command in '/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/install/final_race_pkg:/opt/ros/foxy /usr/bin/cmake --install /home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/build/opponent_predictor

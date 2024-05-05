@@ -1,0 +1,10 @@
+[0.000000] (-) TimerEvent: {}
+[0.000193] (dummy_car) JobQueued: {'identifier': 'dummy_car', 'dependencies': OrderedDict()}
+[0.000211] (final_race_pkg) JobQueued: {'identifier': 'final_race_pkg', 'dependencies': OrderedDict()}
+[0.000221] (opponent_predictor) JobQueued: {'identifier': 'opponent_predictor', 'dependencies': OrderedDict()}
+[0.000230] (dummy_car) JobStarted: {'identifier': 'dummy_car'}
+[0.065040] (final_race_pkg) JobStarted: {'identifier': 'final_race_pkg'}
+[0.073525] (final_race_pkg) JobEnded: {'identifier': 'final_race_pkg', 'rc': 0}
+[0.074217] (dummy_car) JobEnded: {'identifier': 'dummy_car', 'rc': 'SIGINT'}
+[0.074569] (opponent_predictor) JobSkipped: {'identifier': 'opponent_predictor'}
+[0.074587] (-) EventReactorShutdown: {}
