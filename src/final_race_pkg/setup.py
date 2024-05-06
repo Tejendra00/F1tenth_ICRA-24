@@ -29,7 +29,8 @@ setup(
         'main_agent = final_race_pkg.main_agent:main',
         'opp_agent = final_race_pkg.opp_agent:main',
         'traj_killer = final_race_pkg.traj_killer:main',
-        'pure_pursuit_node = final_race_pkg.pure_pursuit_node:main'
+        'pure_pursuit_node = final_race_pkg.pure_pursuit_node:main',
+        'raceline_generate = final_race_pkg.raceline_generate:main',
     ],
     },
 )

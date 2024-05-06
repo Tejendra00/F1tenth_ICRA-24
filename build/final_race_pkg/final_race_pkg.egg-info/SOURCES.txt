@@ -10,8 +10,10 @@ setup.py
 ../../build/final_race_pkg/final_race_pkg.egg-info/zip-safe
 final_race_pkg/__init__.py
 final_race_pkg/opp_agent.py
+final_race_pkg/pure_pursuit_lane_switch.py
 final_race_pkg/pure_pursuit_node.py
 final_race_pkg/pure_pursuit_node_slow_down.py
+final_race_pkg/raceline_generate.py
 final_race_pkg/traj_killer.py
 final_race_pkg/traj_killer_script.py
 final_race_pkg/util.py
