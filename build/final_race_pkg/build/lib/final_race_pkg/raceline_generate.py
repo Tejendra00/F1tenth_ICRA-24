@@ -83,7 +83,7 @@ class CurvePlotterNode(Node, QMainWindow):
         self.ax = self.figure.add_subplot(111)  # 2D projection
         self.load_and_display_map('/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg/maps/levine_0301.pgm')
         main_layout.addWidget(self.canvas)
-        #self.canvas.mpl_connect('button_press_event', self.on_click)  # Connect click event
+        self.canvas.mpl_connect('button_press_event', self.on_click)  # Connect click event
 
 
     def create_curve_input_area(self, layout, curve_index):
@@ -149,6 +149,11 @@ class CurvePlotterNode(Node, QMainWindow):
             self.ax.imshow(img_array, cmap='gray', extent=[0, img.width, 0, img.height], origin='lower')
             self.ax.set_aspect('equal', adjustable='box')
 
+    def on_click(self, event):
+        """Handle click events to add points directly on the map."""
+        if event.inaxes == self.ax:
+            for i in range(2):  # Assuming you want to add points to all curves by default
+                self.add_point(i, str(event.xdata), str(event.ydata), '0') 
         
 
     def create_slider(self, label_text, initial_value, callback, min_value, max_value, tick_interval):
@@ -234,12 +239,12 @@ class CurvePlotterNode(Node, QMainWindow):
         down_z_button.setFixedSize(QSize(20, 20))
 
         # Set up connections for buttons
-        up_x_button.clicked.connect(lambda: adjust_value(x_input, 1.0))
-        down_x_button.clicked.connect(lambda: adjust_value(x_input, -1.0))
-        up_y_button.clicked.connect(lambda: adjust_value(y_input, 1.0))
-        down_y_button.clicked.connect(lambda: adjust_value(y_input, -1.0))
-        up_z_button.clicked.connect(lambda: adjust_value(z_input, 1.0))
-        down_z_button.clicked.connect(lambda: adjust_value(z_input, -1.0))
+        up_x_button.clicked.connect(lambda: adjust_value(x_input, 0.1))
+        down_x_button.clicked.connect(lambda: adjust_value(x_input, -0.1))
+        up_y_button.clicked.connect(lambda: adjust_value(y_input, 0.1))
+        down_y_button.clicked.connect(lambda: adjust_value(y_input, -0.1))
+        up_z_button.clicked.connect(lambda: adjust_value(z_input, 0.1))
+        down_z_button.clicked.connect(lambda: adjust_value(z_input, -0.1))
 
         # Slider for adjusting weight 'w'
         w_slider = QSlider(Qt.Horizontal)
