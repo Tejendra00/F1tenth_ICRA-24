@@ -202,9 +202,7 @@ class PurePursuit(Node):
         self.v_min = np.min(self.v_list)
         # print("curr_pos shape:", curr_pos.shape)
         # print("curr_yaw shape:", curr_yaw.shape)  # This should ideally be a scalar or a 1D array with a single element
-        print("xyv_list shape:", self.xyv_list.shape)
-        print("yaw_list shape:", self.yaw_list.shape)
-        print("v_list shape:", self.v_list.shape)
+        
 
         
     def pose_callback(self, pose_msg):
@@ -230,15 +228,7 @@ class PurePursuit(Node):
         yaw_list = self.yaw_list
         v_list = self.v_list
         
-        print("Dimensions of self.curr_pos:", self.curr_pos.shape)
-        print("Dimensions of self.curr_yaw:", self.curr_yaw)
-        print("Dimensions of xyv_list:", xyv_list.shape)
-        print("Dimensions of yaw_list:", yaw_list.shape)
-        print("Dimensions of v_list:", v_list.shape)
-        print("L:", L)
-        print("lookahead_points:", lookahead_points)
-        print("lookbehind_points:", lookbehind_points)
-        print("slope:", slope)
+
 
 
 
@@ -290,7 +280,7 @@ class PurePursuit(Node):
         message = AckermannDriveStamped()
         message.drive.speed = target_v
         message.drive.steering_angle = self.get_steer(error)
-        #self.get_logger().info('speed: %f, steer: %f' % (target_v, self.get_steer(error)))
+        self.get_logger().info('speed: %f, steer: %f' % (target_v, self.get_steer(error)))
         self.drive_pub_.publish(message)
 
         # remember to visualize the waypoints

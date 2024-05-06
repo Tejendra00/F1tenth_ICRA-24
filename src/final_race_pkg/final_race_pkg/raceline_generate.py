@@ -7,14 +7,13 @@ import json
 import os
 import csv
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget,
-                             QLineEdit, QHBoxLayout, QGridLayout, QLabel, QSlider,
+                             QLineEdit, QHBoxLayout, QGridLayout, QLabel, QSlider, 
                              QScrollArea)
 from PyQt5.QtCore import Qt, QSize
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from scipy.interpolate import splprep, splev
 from matplotlib.patches import Polygon
-from PIL import Image
 
 class CurvePlotterNode(Node, QMainWindow):
     def __init__(self):
@@ -39,34 +38,6 @@ class CurvePlotterNode(Node, QMainWindow):
         self.setCentralWidget(central_widget)
         central_widget.setLayout(main_layout)
 
-        # Adding input fields for axis configuration
-        self.x_min_input = QLineEdit("0")
-        self.x_max_input = QLineEdit("100")
-        self.y_min_input = QLineEdit("0")
-        self.y_max_input = QLineEdit("100")
-        self.resolution_input = QLineEdit("1")  # Default resolution
-
-        # Button to update plot based on input fields
-        update_plot_button = QPushButton('Update Plot')
-        update_plot_button.clicked.connect(self.update_plot_with_zoom)
-
-        # Layout for axis range inputs
-        axis_layout = QGridLayout()
-        axis_layout.addWidget(QLabel("X Min:"), 0, 0)
-        axis_layout.addWidget(self.x_min_input, 0, 1)
-        axis_layout.addWidget(QLabel("X Max:"), 0, 2)
-        axis_layout.addWidget(self.x_max_input, 0, 3)
-        axis_layout.addWidget(QLabel("Y Min:"), 1, 0)
-        axis_layout.addWidget(self.y_min_input, 1, 1)
-        axis_layout.addWidget(QLabel("Y Max:"), 1, 2)
-        axis_layout.addWidget(self.y_max_input, 1, 3)
-        axis_layout.addWidget(QLabel("Resolution:"), 2, 0)
-        axis_layout.addWidget(self.resolution_input, 2, 1)
-        axis_layout.addWidget(update_plot_button, 2, 2, 1, 2)
-
-        main_layout.addLayout(left_layout)
-        left_layout.addLayout(axis_layout)
-
         # Split left area into two parts for two curves
         curve1_area = QGridLayout()
         curve2_area = QGridLayout()
@@ -81,13 +52,12 @@ class CurvePlotterNode(Node, QMainWindow):
         self.figure = Figure(figsize=(10, 8))
         self.canvas = FigureCanvas(self.figure)
         self.ax = self.figure.add_subplot(111)  # 2D projection
-        self.load_and_display_map('/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg/maps/levine_0301.pgm')
+        main_layout.addLayout(left_layout)
         main_layout.addWidget(self.canvas)
-        #self.canvas.mpl_connect('button_press_event', self.on_click)  # Connect click event
-
+        self.canvas.mpl_connect('button_press_event', self.on_click)
 
     def create_curve_input_area(self, layout, curve_index):
-    # Spline order and smoothing factor sliders
+        # Spline order and smoothing factor sliders
         controls_layout = QHBoxLayout()
         order_slider, order_label = self.create_slider(f"Spline Order", self.curves[curve_index]["spline_order"], lambda s, l: self.update_order(s, l, curve_index), 1, 5, 1)
         smoothing_slider, smoothing_label = self.create_slider(f"Smoothing Factor", self.curves[curve_index]["smoothing_factor"], lambda s, l: self.update_smoothing(s, l, curve_index), 0, 6, 1)
@@ -97,12 +67,12 @@ class CurvePlotterNode(Node, QMainWindow):
         controls_layout.addWidget(smoothing_slider)
         layout.addLayout(controls_layout, 0, 0, 1, 1)
         
-        # Store sliders in the curves dictionary
+        # 将滑块和标签的引用存储到curves字典中
         self.curves[curve_index]["spline_order_slider"] = order_slider
         self.curves[curve_index]["spline_order_label"] = order_label
         self.curves[curve_index]["smoothing_slider"] = smoothing_slider
         self.curves[curve_index]["smoothing_label"] = smoothing_label
-        
+
         # Scrollable area for points
         scroll_widget = QWidget()
         points_layout = QVBoxLayout(scroll_widget)
@@ -138,17 +108,7 @@ class CurvePlotterNode(Node, QMainWindow):
         buttons_layout.addWidget(save_button)
         
         # Load initial data if exists
-        self.load_waypoints(curve_index)  # Ensure this is called after all UI elements are created
-
-
-    def load_and_display_map(self, map_path, resolution=1):
-        """Load and display a .pgm map file with specified resolution."""
-        with Image.open(map_path) as img:
-            img = img.resize((int(img.width * resolution), int(img.height * resolution)), Image.NEAREST)
-            img_array = np.array(img)
-            self.ax.imshow(img_array, cmap='gray', extent=[0, img.width, 0, img.height], origin='lower')
-            self.ax.set_aspect('equal', adjustable='box')
-
+        self.load_waypoints(curve_index)
         
 
     def create_slider(self, label_text, initial_value, callback, min_value, max_value, tick_interval):
@@ -162,23 +122,6 @@ class CurvePlotterNode(Node, QMainWindow):
         slider.valueChanged.connect(lambda: callback(slider, label))
         slider.valueChanged.connect(self.plot_curve)  # Trigger replot when slider values change
         return slider, label
-    
-    def update_plot_with_zoom(self):
-        x_min = float(self.x_min_input.text())
-        x_max = float(self.x_max_input.text())
-        y_min = float(self.y_min_input.text())
-        y_max = float(self.y_max_input.text())
-        resolution = float(self.resolution_input.text())
-        
-        # Update the axes with the new limits
-        self.ax.set_xlim(x_min, x_max)
-        self.ax.set_ylim(y_min, y_max)
-
-        # Load and display the map at the new resolution
-        self.load_and_display_map('/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg/maps/levine_0301.pgm', resolution)
-
-        # Redraw the plot
-        self.plot_curve()
 
     def update_order(self, slider, label, curve_index):
         self.curves[curve_index]["spline_order"] = slider.value()
@@ -234,12 +177,12 @@ class CurvePlotterNode(Node, QMainWindow):
         down_z_button.setFixedSize(QSize(20, 20))
 
         # Set up connections for buttons
-        up_x_button.clicked.connect(lambda: adjust_value(x_input, 1.0))
-        down_x_button.clicked.connect(lambda: adjust_value(x_input, -1.0))
-        up_y_button.clicked.connect(lambda: adjust_value(y_input, 1.0))
-        down_y_button.clicked.connect(lambda: adjust_value(y_input, -1.0))
-        up_z_button.clicked.connect(lambda: adjust_value(z_input, 1.0))
-        down_z_button.clicked.connect(lambda: adjust_value(z_input, -1.0))
+        up_x_button.clicked.connect(lambda: adjust_value(x_input, 0.1))
+        down_x_button.clicked.connect(lambda: adjust_value(x_input, -0.1))
+        up_y_button.clicked.connect(lambda: adjust_value(y_input, 0.1))
+        down_y_button.clicked.connect(lambda: adjust_value(y_input, -0.1))
+        up_z_button.clicked.connect(lambda: adjust_value(z_input, 0.1))
+        down_z_button.clicked.connect(lambda: adjust_value(z_input, -0.1))
 
         # Slider for adjusting weight 'w'
         w_slider = QSlider(Qt.Horizontal)
@@ -371,23 +314,28 @@ class CurvePlotterNode(Node, QMainWindow):
         with open(waypoints_file, 'w') as f:
             json.dump(json_data, f, indent=4)
         print(f"Data for curve {curve_index + 1} saved to '{waypoints_file}' and '{curve_file}'.")
+    
+    def on_click(self, event):
+        if event.button == 1 and event.inaxes == self.ax:  # Left mouse button and click inside the axes
+            curve_index = 0  # Change this based on your application's needs or UI state
+            x_coord = round(event.xdata, 2)  # Round the x-coordinate to two decimal places
+            y_coord = round(event.ydata, 2)  # Round the y-coordinate to two decimal places
+            self.add_point(curve_index, str(x_coord), str(y_coord), '0.0')  # z-coordinate is set to '0.0' here as an example
+            self.plot_curve()  # Update the plot with the new point
+
+            
+
 
 
     def plot_curve(self):
         if not hasattr(self, 'ax'):  # Check if 'ax' is already initialized
             return  # Optionally, raise an exception or create a logger warning
 
-        # Clear the plot without removing the map
-        #self.ax.clear()
-        
-
+        self.ax.clear()
         if hasattr(self, 'colorbars'):
             for cbar in self.colorbars:
                 cbar.remove()
         self.colorbars = []
-
-        # Reload map to ensure it stays after clearing
-        self.load_and_display_map('/home/ros2/F1tenth-Final-Race-Agent-and-Toolbox/src/final_race_pkg/maps/levine_0301.pgm')
 
         color_maps = ['cool', 'autumn']  # Updated color maps for higher contrast
         scatters = []  # To keep scatter objects for colorbars
@@ -422,31 +370,30 @@ class CurvePlotterNode(Node, QMainWindow):
             points = np.array(point_data)
             tck, u = splprep(points.T, s=self.curves[curve_index]['smoothing_factor'], k=self.curves[curve_index]['spline_order'], per=True, w=weights)
             new_points = splev(np.linspace(0, 1, 200), tck)
-
+            
             scatter = self.ax.scatter(new_points[0], new_points[1], c=new_points[2], cmap=color_maps[curve_index], label=f'Curve {curve_index + 1}')
             scatters.append(scatter)
 
         # Handling colorbars
-        for i, scatter in enumerate(scatters):
+        for i,(scatter, _) in enumerate(zip(scatters, color_maps)):
             colorbar = self.figure.colorbar(scatter, ax=self.ax, orientation='vertical', pad=0.1, fraction=0.02)
             colorbar.set_label(f'Traj {i+1}')
             self.colorbars.append(colorbar)  # Keep track of colorbars
-
-        # Redraw existing polygons or other elements as needed
-        # Define and add any polygons or shapes if needed here
-
             
         # Define polygons' vertices
-        # vertices1 = [(-3.8, -1.5), (8.1, -1.1), (7.8, 13.5), (2.0, 13.3), (1.95, 5.87), (-4.1, 5.8)]
-        # vertices2 = [(-0.4, 1.3), (5.36, 1.51), (5.29, 8.55), (4.78, 8.53), (4.86, 2.14), (-0.42, 1.96)]
+        vertices1 = [(-8.6, -0.763), (1.96, -0.517), (1.26, 23.6), (-9.06, 23.4)]
+        vertices2 = [(-6.85, 0.954), (0.327, 1.07), (-0.211, 21.9), (-7.37, 21.7)]
 
-        # # Create Polygon objects
-        # polygon1 = Polygon(vertices1, closed=True, edgecolor='black', fill=None, linewidth=3.0)
-        # polygon2 = Polygon(vertices2, closed=True, edgecolor='black', fill=True, facecolor='black')
+        # Create Polygon objects
+        polygon1 = Polygon(vertices1, closed=True, edgecolor='black', fill=None, linewidth=3.0)
+        polygon2 = Polygon(vertices2, closed=True, edgecolor='black', fill=True, facecolor='black')
         
         # Add polygons to the plot
-        # self.ax.add_patch(polygon1)
-        # self.ax.add_patch(polygon2)
+        self.ax.add_patch(polygon1)
+        self.ax.add_patch(polygon2)
+
+        self.ax.set_xlim(-10, 5)  # Replace x_min_value and x_max_value with your desired limits
+        self.ax.set_ylim(-2, 25)
 
         self.ax.set_xlabel('X coordinate')
         self.ax.set_ylabel('Y coordinate')

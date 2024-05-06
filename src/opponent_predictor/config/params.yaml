@@ -1,5 +1,5 @@
 # The following params are for maps
-map_name: 'final2024'
+map_name: 'levine_0301'
 map_img_ext: '.pgm'
 
 # The following params are for opponent predictor
