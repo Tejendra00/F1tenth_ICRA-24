@@ -182,7 +182,7 @@ class PurePursuit(Node):
                     self.opponent_last = self.opponent.copy()
                     self.opponent_v = opponent_v
                     # print(f'cur distance diff {oppoent_dist_diff}')
-                    # print(f'cur oppoent v {self.opponent_v}')
+                    print(f'cur oppoent v {self.opponent_v}')
                 else:
                     self.pred_v_counter += 1
             else:
@@ -200,7 +200,11 @@ class PurePursuit(Node):
         self.yaw_list = self.current_waypoints[:, 3]
         self.v_max = np.max(self.v_list)
         self.v_min = np.min(self.v_list)
+        # print("curr_pos shape:", curr_pos.shape)
+        # print("curr_yaw shape:", curr_yaw.shape)  # This should ideally be a scalar or a 1D array with a single element
+        
 
+        
     def pose_callback(self, pose_msg):
         if self.flag == True:  
             curr_x = pose_msg.pose.position.x
@@ -212,8 +216,9 @@ class PurePursuit(Node):
             curr_quat = pose_msg.pose.pose.orientation
         self.curr_pos = np.array([curr_x, curr_y])
         self.curr_yaw = math.atan2(2 * (curr_quat.w * curr_quat.z + curr_quat.x * curr_quat.y),
-                                1 - 2 * (curr_quat.y ** 2 + curr_quat.z ** 2))
-
+                              1 - 2 * (curr_quat.y ** 2 + curr_quat.z ** 2))
+        
+        # change L based on another lookahead distance for yaw difference!
         L = self.get_parameter('lookahead_distance').get_parameter_value().double_value
         lookahead_points = self.get_parameter('lookahead_points').get_parameter_value().integer_value
         lookbehind_points = self.get_parameter('lookbehind_points').get_parameter_value().integer_value
@@ -222,48 +227,63 @@ class PurePursuit(Node):
         xyv_list = self.xyv_list
         yaw_list = self.yaw_list
         v_list = self.v_list
+        
+
+
+
+
 
         error, target_v, target_point, curr_target_idx = get_lookahead(self.curr_pos, self.curr_yaw, xyv_list, yaw_list, v_list, L, lookahead_points, lookbehind_points, slope)
+
         self.target_point = target_point
         self.curr_target_idx = curr_target_idx
+        
+        
+        # Avoidance
+        # if self.obstacles is not None:
+        #     obstacle_dist = np.linalg.norm(self.obstacles - curr_pos, axis=1)
+        #     min_dist = np.min(obstacle_dist)
+        #     obs_activate_dist = 2.0
+        #     if min_dist < obs_activate_dist:
+        #         # target_v *= min_dist / obs_activate_dist
+        #         self.current_waypoints = self.waypoints_curve2
 
+        obs_activate_dist = 4.0
+        min_safe_dist = 0.5
         if self.obstacles is not None:
-            vector_to_opponent = self.opponent - self.curr_pos
-            angle_to_opponent = math.atan2(vector_to_opponent[1], vector_to_opponent[0]) - self.curr_yaw
-            angle_to_opponent = (angle_to_opponent + np.pi) % (2 * np.pi) - np.pi  # Normalize angle
+            # Calculate distance from each obstacle to the current robot position
+            obstacle_dist = np.linalg.norm(self.obstacles - self.curr_pos, axis=1)            
+            min_dist = np.min(obstacle_dist)
+            print(f"Closest obstacle distance: {min_dist}")
+            # Check if any obstacle is closer than the activation distance
+            
+            if min_dist < min_safe_dist:
+		# Calculate a scaled speed based on the distance to the closest obstacle
+                target_v *= min_dist / min_safe_dist
+            if min_dist < obs_activate_dist and self.current_waypoints is self.waypoints_curve1:
+                self.current_waypoints = self.waypoints_curve2
+                self.update_current_waypoints()  # Update the waypoint lists
+                print("Switching to curve2 due to obstacles")
+            elif min_dist >= obs_activate_dist and self.current_waypoints is self.waypoints_curve2:
+                self.current_waypoints = self.waypoints_curve1
+                self.update_current_waypoints()  # Update the waypoint lists
+                print("Switching back to curve1, no close obstacles")
+        else:
+            if self.current_waypoints is self.waypoints_curve2:
+                self.current_waypoints = self.waypoints_curve1
+                self.update_current_waypoints()  # Update the waypoint lists
+                print("Switching back to curve1, no obstacles detected")
 
-            # Adjust the angular threshold based on the current path
-            if self.current_waypoints is self.waypoints_curve1:
-                angular_threshold = np.deg2rad(12)  # Standard threshold
-            else:
-                angular_threshold = np.deg2rad(50)  # Increased threshold for switching back
-
-            distance_to_opponent = np.linalg.norm(vector_to_opponent)
-
-            if abs(angle_to_opponent) < angular_threshold:
-                if distance_to_opponent < 2.0:
-                    target_v *= distance_to_opponent / 2.0
-                switching_distance = 4.0  # Distance threshold for path switching
-                if distance_to_opponent < switching_distance and self.current_waypoints is self.waypoints_curve1:
-                    self.current_waypoints = self.waypoints_curve2
-                    self.update_current_waypoints()
-                    print("Switching to curve2 due to opponent proximity")
-                elif distance_to_opponent >= switching_distance + 1.0 and self.current_waypoints is self.waypoints_curve2:
-                    self.current_waypoints = self.waypoints_curve1
-                    self.update_current_waypoints()
-                    #print("Switching back to curve1 as opponent distance increased")
-            else:
-                if self.current_waypoints is self.waypoints_curve2:
-                    self.current_waypoints = self.waypoints_curve1
-                    self.update_current_waypoints()  # Update the waypoint lists
-                    #print("Switching back to curve1, no obstacles detected")
-
-        # Send control commands
+        
+        
+        # TODO: publish drive message, don't forget to limit the steering angle.
         message = AckermannDriveStamped()
         message.drive.speed = target_v
         message.drive.steering_angle = self.get_steer(error)
+        self.get_logger().info('speed: %f, steer: %f' % (target_v, self.get_steer(error)))
         self.drive_pub_.publish(message)
 
+        # remember to visualize the waypoints
         self.visualize_waypoints()
 
 ####################################### Visualization ########################################
@@ -358,6 +378,5 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
 
 
